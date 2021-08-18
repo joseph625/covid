@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #a0c1b8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.app__header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.app__header > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app__left {
+  min-width: 690px;
+}
+
+.app__left > h1 {
+  color: #351f39;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-cases {
+  background-color: #351f39 !important;
+  color: white !important;
+  border-radius: 20px !important;
+}
+
+.box-recover {
+  background-color: #658dab !important;
+  color: white !important;
+  border-radius: 20px !important;
+}
+
+.box-death {
+  background-color: #30011e !important;
+  color: white !important;
+  border-radius: 20px !important;
+}
+
+.box-cases > .MuiCardContent-root > p,
+.box-death > .MuiCardContent-root > p,
+.box-recover > .MuiCardContent-root > p {
+  color: white !important;
+}
+
+.app__right > img {
+  width: 850px;
+}
+
+.table-country {
+  margin-top: 60px;
+  background-color: #719fb0 !important;
+}
+
+.table-country > h3 {
+  padding: 30px 0 0 30px;
+  color: #ffffff;
+}
+
+.img-responsive{
+  display: none;
+  width: 80%;
+  margin: 0 10%;
+}
+
+footer{
+  text-align: center;
+  margin: 30px 0;
+}
+
+@media (max-width: 1660px) {
+  .app__right > img {
+    width: 100%;
+    height: 850px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1300px) {
+  
+  .app__header > img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  .app__left {
+    min-width: 500px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .app__stats {
+    flex-direction: column;
+  }
+  .MuiPaper-root {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .app {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app__right > img{
+    display: none;
+  }
+
+  .img-responsive{
+    display: block;
+  }
+
+}
+
+@media (max-width: 560px) {
+  .app__left {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .app__left > h1 {
+    font-size: 1.8rem;
+  }
+  .img-responsive{
+    width: 100%;
+    margin: 0;
   }
 }

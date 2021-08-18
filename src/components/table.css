@@ -1,0 +1,16 @@
+.table{
+    margin-top: 20px;
+    overflow: scroll;
+    height: 400px;
+}
+
+.table > tr{
+    display: flex;
+    justify-content: space-between;
+    background-color: #726A95;
+    color: white;
+}
+
+.table > tr > td{
+    padding: 0.5rem;
+}
